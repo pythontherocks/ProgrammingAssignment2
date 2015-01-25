@@ -1,16 +1,16 @@
-
-## This function creates a matix cashe
+#######################################################################
+##               This function creates a matix cache                 ##
 
 makeCacheMatrix <- function(x = matrix()) {
                     
                     im <- NULL  # initialize
                     y <- NULL   # initialize
                     
-                    setmatrix <- function(y) {
+                    setmatrix <- function(y) {   # set matrix here
                             x <<- y
                             im <<- NULL
                       }
-                    getmatrix  <- function() x   # get matrix
+                    getmatrix  <- function() x   # get matrix here
                     
                     ### old code used in testing.
                     ###setim <- function(inv) im <<- inv
@@ -43,6 +43,7 @@ cacheSolve <- function(x, ...) {
                       }
 ######################## program begins here ##########################################
 ## This line runs the cachesolve and cachematrix funtions while creating a 3x3matrix ##
+## all in a single line                                                              ##
 
 cacheSolve(makeCacheMatrix(2*diag(3)))
 
